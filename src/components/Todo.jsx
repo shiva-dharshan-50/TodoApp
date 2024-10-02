@@ -32,14 +32,14 @@ export default function Todo() {
     }
   return (
     <div>
-      <div  className='w-[50%] bg-yellow-400 mx-auto p-5 rounded-md flex justify-center gap-5'>
+      <div  className='w-[90%] py-2 mt-5 text-sm lg:text-xl lg:w-[50%]  bg-yellow-400 mx-auto lg:p-5 rounded-md flex justify-center gap-5'>
         <input value={todoInput} onChange={e=>setTodoInput(e.target.value)} className='py-2 w-[60%] rounded-sm px-5' type='text' placeholder='Enter the Todo'></input>
         <button onClick={()=>handleSubmit(todoInput)} className='border-2 border-white py-1 px-3 rounded-md hover:translate-y-1 duration-200 hover:text-white'>Add+</button>
       </div>
-      <div className='w-[50%] shadow-md mt-10 border-2 mx-auto p-5 rounded-md flex flex-col justify-center gap-5'>
+      <div className='w-[90%] lg:w-[50%] shadow-md mt-5 lg:mt-10 border-2 mx-auto p-2 lg:p-5 rounded-md flex flex-col justify-center gap-5'>
         {todos.map((res,index)=>{
             return(
-                <div key={index} className='flex text-xl  justify-between border-2 border-black py-2 px-5 rounded-sm'>
+                <div key={index} className='flex text-md lg:text-xl  justify-between border-2 border-black py-1 lg:py-2 px-5 rounded-sm'>
                     <p >{res}</p>
                     <div className='flex gap-5 text-md scale-125 items-center'>
                     <FaEdit onClick={()=>handleEdit(index)} className='text-yellow-500 hover:translate-y-1 duration-200 cursor-pointer'/>
